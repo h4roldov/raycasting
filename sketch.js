@@ -13,13 +13,14 @@ let img2;
 let floor;
 
 function setup() {
-    createCanvas(1200, 600);
+
     // wall = new Tile(300, 10, 600, 20);
     // wall2 = new Tile(500, 200, 20, 300);
     // wall3 = new Tile(100, 100, 150, 20);
     // wall4 = new Tile(300, 590, 600, 20);
     world = new Map(600);
-    ray = new Ray(createVector(100, 100), radians(180));
+    createCanvas(1200, 600);
+    //ray = new Ray(createVector(100, 100), radians(180));
     player = new Player(460, 560, 60);
 
     world.show();
@@ -61,6 +62,7 @@ function draw() {
         const b = map(c, 0, 600, 255, 0);
         h = map(c, 0, 700, 700, 300);
         an = map(ancho, 0, 100, 1, 100, true);
+
         //fill(img);
         //rectMode(CENTER);
         imageMode(CENTER);

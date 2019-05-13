@@ -9,10 +9,13 @@ class Player {
         for (let i = -fov / 2; i < fov / 2; i++) {
             this.rays.push(new Ray(this.pos, radians(i * 0.5) + this.heading));
         }
+
     }
+
     setWalls(walls) {
         this.walls = walls;
     }
+
     rotate(angle) {
         this.heading += angle;
         let index = 0;
@@ -49,11 +52,7 @@ class Player {
 
             }
             if (closest) {
-                push();
-                stroke(255);
-                fill(255);
                 line(ray.pos.x, ray.pos.y, closest.x, closest.y);
-                pop();
             }
             column.push(record);
         }
