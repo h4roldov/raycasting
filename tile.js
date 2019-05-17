@@ -6,7 +6,6 @@ class Tile {
         this.height = height;
         this.type = type;
         //this.ima = loadImage('img/floor.jpg');
-
     }
 
     show() {
@@ -29,9 +28,5 @@ class Tile {
         // } else
         stroke(255);
         rect(this.pos.x, this.pos.y, this.width, this.height);
-        // line(this.pos.x, this.pos.y, this.pos.x, this.pos.y + this.height);
-        // line(this.pos.x, this.pos.y + this.height, this.pos.x + this.width, this.pos.y);
-        // line(this.pos.x + this.width, this.pos.y + this.height, this.pos.x + this.width, this.pos.y - this.height);
-        // line(this.pos.x + this.width, this.pos.y - this.height, this.pos.x - this.width, this.pos.y - this.height);
     }
 }

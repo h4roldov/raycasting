@@ -25,12 +25,10 @@ class Player {
         }
     }
     move(amt) {
-
         const vel = p5.Vector.fromAngle(this.heading);
         vel.setMag(amt);
         if ((this.pos.x + vel.x <= 30 || this.pos.x + vel.x >= 570) || (this.pos.y + vel.y <= 30 || this.pos.y + vel.y >= 570) || ((this.pos.x + vel.x >= 390 && this.pos.x + vel.x <= 420) && (this.pos.y + vel.y >= 210 && this.pos.y + vel.y <= 420)))
             return;
-        //vel.setMag(amt);
         this.pos.add(vel);
     }
     lookWall(a) {
@@ -49,7 +47,6 @@ class Player {
                         closest = pt;
                     }
                 }
-
             }
             if (closest) {
                 line(ray.pos.x, ray.pos.y, closest.x, closest.y);
